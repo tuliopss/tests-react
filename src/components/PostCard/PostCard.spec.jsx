@@ -17,5 +17,17 @@ describe("<PostCard/>", () => {
       "src",
       props.cover
     );
+
+    expect(
+      screen.getByRole("heading", { name: /title 1/i })
+    ).toBeInTheDocument();
+
+    expect(screen.getByText("body")).toBeInTheDocument();
+  });
+
+  it("should match snapshot", () => {
+    const { container } = render(<PostCard {...props} />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

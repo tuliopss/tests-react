@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Button/> > should be enable when disabled is false 1`] = `
+<button
+  class="button"
+>
+  Load more
+</button>
+`;

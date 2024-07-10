@@ -30,10 +30,14 @@ describe("<Button/>", () => {
     const button = screen.getByRole("button", { name: /load more/i });
     expect(button).toBeDisabled();
   });
-  it("should be enable when disabled is false", async () => {
-    render(<Button text='Load more' disabled={false} />);
 
-    const button = screen.getByRole("button", { name: /load more/i });
-    expect(button).toBeEnabled();
+  it("should be enable when disabled is false", async () => {
+    const fn = vi.fn();
+
+    const { container } = render(
+      <Button text='Load more' disabled={false} handleClick={fn} />
+    );
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
