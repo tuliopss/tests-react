@@ -1,9 +1,8 @@
 import { Component, useCallback, useEffect, useState } from "react";
 import "./Home.css";
 import { loadPosts } from "../../../utils/load-photos";
-import Post from "../../Posts/Post";
 import Button from "../../Button/Button";
-import Posts from "../../Posts/Post";
+import Posts from "../../Posts/Posts";
 import TextInput from "../../TextInput/TextInput";
 
 const Home = () => {

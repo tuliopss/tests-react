@@ -7,6 +7,7 @@ const TextInput = ({ handleChange, searchValue }) => {
       onChange={handleChange}
       value={searchValue}
       className='text-input'
+      placeholder='Type your search'
     />
   );
 };

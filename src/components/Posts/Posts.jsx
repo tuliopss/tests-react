@@ -1,6 +1,6 @@
-import { PostCard } from "../PostCard/PostCard";
+import PostCard from "../PostCard/PostCard";
 import "./Posts.css";
-const Posts = ({ posts }) => (
+const Posts = ({ posts = [] }) => (
   <div className='posts'>
     {posts.map((post) => (
       <PostCard
