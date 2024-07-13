@@ -1,4 +1,4 @@
-import { describe, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import Posts from "./Posts";
 import { render, screen } from "@testing-library/react";
 
@@ -36,6 +36,15 @@ describe("<Posts/>", () => {
       "img/img.png 3"
     );
   });
+
+  it("should not render posts", () => {
+    render(<Posts />);
+
+    expect(
+      screen.queryByRole("heading", { name: /title/i })
+    ).not.toBeInTheDocument();
+  });
+
   it("should match snapshot", () => {
     const { container } = render(<Posts {...propsMock} />);
 
