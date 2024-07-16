@@ -1,13 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Posts/> > should match snapshot 1`] = `
-<input
-  class="text-input"
-  type="search"
-  value=""
-/>
-`;
-
 exports[`<TextInput/> > should match snapshot 1`] = `
 <div>
   <input

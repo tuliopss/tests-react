@@ -42,7 +42,7 @@ describe("<Posts/>", () => {
 
     expect(
       screen.queryByRole("heading", { name: /title/i })
-    ).not.toBeInTheDocument();
+    ).not.toBeInTheDocument();  
   });
 
   it("should match snapshot", () => {

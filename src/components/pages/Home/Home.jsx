@@ -53,11 +53,7 @@ const Home = () => {
   return (
     <section className='container'>
       <div className='search-container'>
-        {searchValue && (
-          <>
-            <h1>Buscando por: {searchValue}</h1>
-          </>
-        )}
+        {!!searchValue && <h1>Search value: {searchValue}</h1>}
 
         <TextInput searchValue={searchValue} handleChange={handleChange} />
       </div>
@@ -65,7 +61,7 @@ const Home = () => {
       {filteredPosts.length > 0 ? (
         <Posts posts={filteredPosts} />
       ) : (
-        <h2>Não existem posts com o título {searchValue}</h2>
+        <p>Não existem posts com esse título</p>
       )}
 
       <div className='button-container'>
